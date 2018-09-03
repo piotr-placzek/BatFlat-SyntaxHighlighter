@@ -20,40 +20,19 @@ class Site extends SiteModule
     {
         $this->core->addCSS(url('inc/modules/prismjs/prismjs/prism.css'));
         $this->core->addJS(url('inc/modules/prismjs/prismjs/prism.js'),'footer');
-
-        $lang['css'] = '<pre><code class="language-css">';
-        $lang['javascript'] = '<pre><code class="language-javascript">';
-        $lang['arduino'] = '<pre><code class="language-arduino">';
-        $lang['autoit'] = '<pre><code class="language-autoit">';
-        $lang['bash'] = '<pre><code class="language-bash">';
-        $lang['c'] = '<pre><code class="language-c">';
-        $lang['cpp'] = '<pre><code class="language-cpp">';
-        $lang['csharp'] = '<pre><code class="language-csharp">';
-        $lang['aspnet'] = '<pre><code class="language-aspnet">';
-        $lang['lua'] = '<pre><code class="language-lua">';
-        $lang['makefile'] = '<pre><code class="language-makefile">';
-        $lang['markdown'] = '<pre><code class="language-markdown">';
-        $lang['less'] = '<pre><code class="language-less">';
-        $lang['json'] = '<pre><code class="language-json">';
-        $lang['latex'] = '<pre><code class="language-latex">';
-        $lang['java'] = '<pre><code class="language-java">';
-        $lang['ini'] = '<pre><code class="language-ini">';
-        $lang['http'] = '<pre><code class="language-http">';
-        $lang['git'] = '<pre><code class="language-git">';
-        $lang['powershell'] = '<pre><code class="language-powershell">';
-        $lang['python'] = '<pre><code class="language-python">';
-        $lang['sass'] = '<pre><code class="language-sass">';
-        $lang['scss'] = '<pre><code class="language-scss">';
-        $lang['sql'] = '<pre><code class="language-sql">';
-        $lang['typescript'] = '<pre><code class="language-typescript">';
-        $lang['yaml'] = '<pre><code class="language-yaml">';
-        $lang['php'] = '<pre><code class="language-php">';
-        $lang['batch'] = '<pre><code class="language-batch">';
-        $lang['visualbasic'] = '<pre><code class="language-visualbasic">';
-        $lang['velilog'] = '<pre><code class="language-velilog">';
-        $lang['vhdl'] = '<pre><code class="language-vhdl">';
         
-        $assign['start'] = $lang;
+        $lang_tags = array('css', 'javascript', 'arduino', 'autoit', 'bash',
+        'c', 'cpp', 'csharp', 'aspnet', 'lua', 'makefile', 'markdown', 'less',
+        'json', 'latex', 'java', 'ini', 'http', 'git', 'powershell', 'python',
+        'sass', 'scss', 'sql', 'typescript', 'yaml', 'php', 'batch', 'visualbasic',
+        'verilog', 'vhdl');
+
+        $result['default'] = '<pre><code class="language-c">';
+        foreach ($lang_tags as &$tag) {
+            $result[$tag] = '<pre><code class="language-'.$tag.'">';
+        }
+
+        $assign['start'] = $result;
         $assign['end'] = '</code></pre>';
         $this->tpl->set('prismjs', $assign);
     }

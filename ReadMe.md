@@ -1,43 +1,65 @@
-# Prism.js module for BatFlat cms.
+# Syntax highlighter for BatFlat
 
-This module imports prism.js.
+Simple module based at [Prism.js](https://prismjs.com/)
 
-Theme: `Coy`
-Config: [Link](https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+c+csharp+autoit+bash+batch+cpp+aspnet+arduino+markup-templating+git+less+http+ini+java+json+latex+markdown+lua+makefile+php+sql+powershell+scss+python+typescript+sass+plsql+yaml+verilog+vhdl+visual-basic&plugins=line-highlight+line-numbers+toolbar+highlight-keywords+command-line+normalize-whitespace+show-language+copy-to-clipboard)
+## Version
+1.1.0
 
-`{$prismjs.start.x}` - Starts block of source code in x language
+## Requirements
+Batflat 1.3.x
 
-`{$prismjs.end}` - Ends block of source code
+<!-- ## Changelog
+![View changelog](./CHANGELOG.md) -->
 
-## Available languages:
-- CSS => `{$prismjs.start.css}`
-- JavaScript => `{$prismjs.start.javascript}`
-- Arduino => `{$prismjs.start.arduino}`
-- AutoIt => `{$prismjs.start.autoit}`
-- Bash => `{$prismjs.start.bash}`
-- C => `{$prismjs.start.c}`
-- C++ => `{$prismjs.start.cpp}`
-- C# => `{$prismjs.start.csharp}`
-- ASP.Net => `{$prismjs.start.aspnet}`
-- Lua => `{$prismjs.start.lua}`
-- MakeFile => `{$prismjs.start.makefile}`
-- Markdown => `{$prismjs.start.markdown}`
-- Less => `{$prismjs.start.less}`
-- JSON => `{$prismjs.start.json}`
-- LaTeX => `{$prismjs.start.latex}`
-- Java => `{$prismjs.start.java}`
-- Ini => `{$prismjs.start.ini}`
-- Http => `{$prismjs.start.http}`
-- Git => `{$prismjs.start.git}`
-- PowerShell => `{$prismjs.start.powershell}`
-- Python => `{$prismjs.start.python}`
-- Sass => `{$prismjs.start.sass}`
-- Scss => `{$prismjs.start.scss}`
-- Sql => `{$prismjs.start.sql}`
-- TypeScript => `{$prismjs.start.typescript}`
-- Yaml => `{$prismjs.start.yaml}`
-- PHP => `{$prismjs.start.php}`
-- Batch => `{$prismjs.start.batch}`
-- VisualBasic => `{$prismjs.start.visualbasic}`
-- Verilog => `{$prismjs.start.velilog}`
-- VHDL => `{$prismjs.start.vhdl}`
+## How to install
+1. Download this repository
+2. Unzip the downloaded files
+3. Move catalog with theme to the `/inc/modules` 
+4. Activate form modules admin panel
+
+## Supported languages
+The module contains the full version of Prism, but supports only the following languages:
+- CSS
+- JavaScript
+- Arduino
+- AutoIt
+- Bash
+- C
+- Cpp
+- Csharp
+- AspNet
+- Lua
+- Makefile
+- Markdown
+- Less
+- Json
+- Latex
+- Java
+- Ini
+- Http
+- Git
+- PowerShell
+- Python
+- Sass
+- Scss
+- Sql
+- TypeScript
+- Yaml
+- Php
+- Batch
+- VisualBasic
+- Verilog
+- Vhdl
+
+## Usage
+To format a block of code, place it between the `{$prismjs.start.LN}` and `{$prismjs.end}` tags, where LN stands for the language name in lowercase letters.
+
+### Examples
+`{$prismjs.start.css} p { color : red; } {$prismjs.end}`
+
+`{$prismjs.start.javascript} alert('OK'); {$prismjs.end}`
+
+## Configuration
+
+### Select theme
+In the administration panel, select the PrismJs module from the main menu. Then select one of the available themes and confirm with the "Choose" button.

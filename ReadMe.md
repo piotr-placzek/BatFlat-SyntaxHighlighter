@@ -8,8 +8,11 @@ Simple module based at [Prism.js](https://prismjs.com/)
 ## Requirements
 Batflat 1.3.x
 
-<!-- ## Changelog
-![View changelog](./CHANGELOG.md) -->
+## Changelog
+### 1.1.0
+- Optimalize site init.
+### 1.1.1
+- Add support for Markup.
 
 ## How to install
 1. Download this repository

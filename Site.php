@@ -27,7 +27,7 @@ class Site extends SiteModule
         'c', 'cpp', 'csharp', 'aspnet', 'lua', 'makefile', 'markdown', 'less',
         'json', 'latex', 'java', 'ini', 'http', 'git', 'powershell', 'python',
         'sass', 'scss', 'sql', 'typescript', 'yaml', 'php', 'batch', 'visualbasic',
-        'verilog', 'vhdl');
+        'verilog', 'vhdl', 'markup');
 
         $result['default'] = '<pre><code class="language-c">';
         foreach ($lang_tags as &$tag) {

@@ -3,7 +3,7 @@
 Simple module based at [Prism.js](https://prismjs.com/)
 
 ## Version
-1.1.0
+1.1.1
 
 ## Requirements
 Batflat 1.3.x
@@ -53,6 +53,7 @@ The module contains the full version of Prism, but supports only the following l
 - VisualBasic
 - Verilog
 - Vhdl
+- Markup
 
 ## Usage
 To format a block of code, place it between the `{$prismjs.start.LN}` and `{$prismjs.end}` tags, where LN stands for the language name in lowercase letters.
